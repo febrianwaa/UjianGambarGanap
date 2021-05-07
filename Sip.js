@@ -8,14 +8,19 @@ import unsip from './Images/unsip.png'
 
 
 export default function App() {
-  
+  const[alternateImage, setAlternateImage] = useState(true);
  
+  const changeImage = () => {
+    setAlternateImage(alternateImage => !alternateImage);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.containerone}>
         <TouchableOpacity style={{borderRadius: 100, height: 150, width: 150, backgroundColor: '#fff', marginTop: 80}}
         >
-          <Image source={sip} style={styles.pillButton}/> 
+          
+         <Image source={sip} style={styles.pillButton}/>
+          
         </TouchableOpacity>
         <TouchableOpacity style={{borderRadius: 100, height: 150, width: 150, backgroundColor: '#fff', marginTop: 80}}
         >
